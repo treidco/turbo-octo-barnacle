@@ -1,5 +1,7 @@
 .idea/
 
+src/main/resources/oauth_data.txt
+
 ### Java template
 *.class
 
