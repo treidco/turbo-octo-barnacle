@@ -4,6 +4,7 @@ import io.github.treidco.config.AppConfiguration
 import io.github.treidco.health.TemplateHealthCheck
 import io.dropwizard.Application
 import io.dropwizard.setup.Environment
+import io.github.treidco.resources.AuthResource
 import io.github.treidco.resources.HelloWorldResource
 
 class APIApplication() : Application<AppConfiguration>() {
@@ -20,7 +21,11 @@ class APIApplication() : Application<AppConfiguration>() {
         val hwHealthCheck = TemplateHealthCheck(config.template)
         val hwResource = HelloWorldResource(config.template, config.defaultName)
 
+        val auth = AuthResource(config.baseAPIUri, config.basePubAPIUri)
+
         env.healthChecks().register("template", hwHealthCheck)
         env.jersey().register(hwResource)
+
+        env.jersey().register(auth)
     }
 }

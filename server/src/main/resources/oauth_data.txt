@@ -1,0 +1,5 @@
+client id: tim_api_test-cHVibGlzaGVyLzY4ODAw
+client secret: src/main/resources/oauth_data.txt
+callback url: http://www.spotxchange.com
+
+https://publisher-api.spotxchange.com/1.0/publisher/authorize?response_type=code&client_id=tim_api_test-cHVibGlzaGVyLzY4ODAw&state=xyz

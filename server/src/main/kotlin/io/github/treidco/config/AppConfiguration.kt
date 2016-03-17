@@ -11,5 +11,10 @@ class AppConfiguration() : Configuration() {
     @JsonProperty("defaultName")
     var defaultName: String = "Stranger"
 
+    @JsonProperty("baseAPIUri")
+    var baseAPIUri: String = "https://test.com/base"
+
+    @JsonProperty("basePubAPIUri")
+    var basePubAPIUri: String = "https://test.com/pubbase"
 
 }

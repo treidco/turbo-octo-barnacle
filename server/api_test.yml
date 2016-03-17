@@ -1,0 +1,13 @@
+template: Hello, %s!
+defaultName: Stranger
+
+baseAPIUri: http://local.api.spotxchange.com/1.0/
+basePublisherAPIUri: http://local.publisher-api.spotxchange.com/1.0
+
+server:
+  applicationConnectors:
+  - type: http
+    port: 9090
+  adminConnectors:
+  - type: http
+    port: 9091
